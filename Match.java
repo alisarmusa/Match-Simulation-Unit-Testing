@@ -1,14 +1,18 @@
 public class Match {
 
     public static void main(String[] args) {
-        Team liv = new Team("Liverpool", 30);
-        Team city = new Team("Manchester City", 25);
+        System.out.println(exhibition());
+    }
 
-        liv.setGoal(liv.goalValue(liv.generateNumber() + liv.power));
-        city.setGoal(city.goalValue(city.generateNumber() + city.power));
+    public static String exhibition() {
+        Team team = new Team();
+        team.liv.setGoal(team.liv.goalValue(team.liv.generateNumber() + team.liv.power));
+        team.city.setGoal(team.city.goalValue(team.city.generateNumber() + team.city.power));
 
-        System.out.println(liv.name + " " + liv.getGoal() + " - " + city.getGoal() + " " + city.name);
+        String home = team.liv.name + " " + team.liv.getGoal();
+        String away = team.city.getGoal() + " " + team.city.name;
 
+        return home + " - " + away;
     }
 
 }
